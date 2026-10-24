@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Amplifie — amplifie le son de ton micro vers une enceinte Bluetooth">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Amplifie">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <title>Amplifie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Amplifie</h1>
+      <p class="tagline">Micro → Enceinte Bluetooth</p>
+    </header>
+
+    <main>
+      <div class="status-card" id="statusCard">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">Prêt</span>
+      </div>
+
+      <div class="controls">
+        <button id="toggleBtn" class="btn-primary" aria-label="Démarrer ou arrêter">
+          <span class="btn-icon" id="btnIcon">▶</span>
+          <span id="btnLabel">Démarrer</span>
+        </button>
+      </div>
+
+      <div class="volume-section">
+        <label for="gainSlider">Volume</label>
+        <div class="volume-row">
+          <input type="range" id="gainSlider" min="0" max="5" step="0.1" value="1.5">
+          <span id="gainValue">1.5×</span>
+        </div>
+      </div>
+
+      <div class="info">
+        <p>Connecte d'abord une enceinte Bluetooth à ton téléphone, puis lance Amplifie.</p>
+        <p class="hint">Le son du micro est renvoyé vers la sortie audio (Bluetooth si connectée).</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>PWA • GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
